@@ -1,0 +1,17 @@
+.custum-fa {
+  font-size: 24px;
+  margin-right: 10px; 
+  cursor: pointer;
+}
+
+.success-icon {
+  color:  #28a745;
+  
+}
+
+.danger-icon {
+  color: #dc3545;
+  
+}
+
+

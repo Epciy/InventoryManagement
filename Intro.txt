@@ -1,0 +1,28 @@
+# install :
+
+../client : npm install
+
+../server : npm install
+
+run client : ng serve
+run server : node index.js
+
+
+admin :
+test@admin.com 
+password: test1234
+
+
+organization :
+org@org.com
+password :1234
+
+
+member :
+user@test.com
+password:123
+
+
+
+
+

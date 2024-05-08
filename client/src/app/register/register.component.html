@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-6 col-xl-7 order-2 order-lg-1">
+    	<div class="container h-100">
+
+    		<div class="register-container">
+        	<div class="register-form">
+            <h2 class="register-heading">S'inscrire en tant qu'administrateur</h2>
+            <p class="register-subheading">Bienvenue de retour ! Veuillez entrer vos coordonnées</p>
+							<form name="form" (ngSubmit)="onSubmit()">
+							  <!-- 2 column grid layout with text inputs for the first and last names -->
+							  <div class="row mb-4">
+							    <div class="col">
+							      <div data-mdb-input-init class="form-outline">
+							        <input type="text" id="form3Example1" class="form-control" name="firstName"  #firstName="ngModel" [(ngModel)]="userData.firstName" required />
+							          
+							        <label class="form-label" for="form3Example1" >Prénom</label>
+							      </div>
+							    </div>
+
+							    <div class="col">
+							      <div data-mdb-input-init class="form-outline">
+							        <input type="text" id="form3Example2" class="form-control"  name="lastName" [(ngModel)]="userData.lastName" 
+						         
+						          #lastName="ngModel"
+						          required 
+						         />	
+												<label class="form-label" for="form3Example2">Nom de famille</label>
+							      </div>
+							    </div>
+							  </div>
+							  <div data-mdb-input-init class="form-outline mb-4">
+							        <input type="text" id="form3Example3" class="form-control"  name="username" [(ngModel)]="userData.username" 
+							        required 
+						          #username="ngModel"
+						         />	
+												<label class="form-label" for="form3Example3">Username</label>
+							    
+							  </div>
+
+							  <!-- Email input -->
+							  <div data-mdb-input-init class="form-outline mb-4">
+							    <input type="email" id="form3Example4" class="form-control" name="email" [(ngModel)]="userData.email"
+				          required 
+				          #email="ngModel"
+				          />
+				         
+							    <label class="form-label" for="form3Example4">Adresse e-mail</label>
+							  </div>
+							  
+							 
+							  <!-- Password input -->
+							  <div data-mdb-input-init class="form-outline mb-4">
+							    <input type="password" id="form3Example5" class="form-control"name="password" [(ngModel)]="userData.password" 
+				          required 
+				          #password="ngModel"
+				          />
+				          
+							    <label class="form-label" for="form3Example5">Mot de passe</label>
+							  </div>
+
+							  
+
+
+							  <!-- Submit button -->
+							  <button (click)="onSubmit()" data-mdb-ripple-init type="button"  class="btn btn-primary btn-block mb-4">S'inscrire</button>
+							  <div  class="create-account">
+                    Vous avez  un compte ? <a [routerLink]="['/login']" class="signup-link">Connexion</a>
+                </div>
+							</form>
+						</div>
+					</div>
+
+		</div>
+	</div>
+
+	<div class="col-md-10 col-lg-6 col-xl-5 d-flex align-items-center order-1 order-lg-2">
+		<img src="assets/students12.svg" alt="students" style="width: 500px; height: auto;">   
+  </div>
+</div>
+</div>

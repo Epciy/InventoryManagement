@@ -1,0 +1,45 @@
+<div class="container">
+  <form >
+   
+    <div class="form-group">
+      <label for="exampleInput1">Nom</label>
+      <input type="text" class="form-control" id="exampleInput1" placeholder="Nom"
+       name="name"
+       required 
+       #name
+       [(ngModel)]="materialDetails.name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInput2">Type</label>
+      <input type="text" class="form-control" id="exampleInput2" placeholder="Type" 
+      	name="type"
+      	required 
+      	#type
+      	[(ngModel)]="materialDetails.type">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputUsername">Status</label>
+      <select class="form-control" id="exampleInputUsername" name="status"  #status [(ngModel)]="materialDetails.status" >
+        <option value="stored">Stocké</option>
+        <option value="in use">En Utilisation</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Confié_à</label>
+        <select class="form-control" id="exampleInputinput4" placeholder="Confié_à" 
+        name="entrusted_to"
+        #entrusted_to="ngModel"
+        [(ngModel)]="materialDetails.entrusted_to" >
+        <option value="null">Aucun</option>
+        <option value="individual">Membre</option>
+        <option value="organization">Organization</option>
+   
+      </select>
+    </div>
+    
+    <button *ngIf="!isEditMode" (click)="addMaterials()" type="submit" class="btn btn-primary">Enregistrer</button>
+    <button *ngIf="isEditMode" (click)="updateMaterial()" type="submit" class="btn btn-primary">Mettre à jour</button>
+
+  </form>
+</div>

@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-6 col-xl-7 order-2 order-lg-1">
+      <div class="mt-4"> 
+        <div class="container h-100">
+            <div class="login-container">
+              <div class="login-form">
+                <h2 class="login-heading">Connexion</h2>
+                
+                <form
+                  action="#"
+                  
+                >
+                  <div data-mdb-input-init class="form-outline mb-4">
+                        <input 
+                          type="email" 
+                          id="form3Example3" 
+                          class="form-control"  
+                          name="email"
+                          required 
+                          [(ngModel)]="loginObj.email"
+                          #email="ngModel"
+                          />
+                         
+                        <label class="form-label" for="form3Example3">Adresse e-mail</label>
+                  </div>
+                      
+                   
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input 
+                          type="password" 
+                          id="form3Example4" 
+                          class="form-control"
+                          name="password"
+                          required 
+                          [(ngModel)]="loginObj.password"
+                          #password="ngModel"
+                          
+                          />
+                        
+                        <label class="form-label" for="form3Example4">Mot de passe</label>
+                      </div>
+                      <div>
+                        <button  (click)="onLogin()" type="submit" class="btn btn-primary btn-block">Connexion</button>
+                      </div>
+                      
+                  <div  class="create-account">
+                    <span>Vous n'avez pas de compte ? </span>
+                    <a [routerLink]="['/register']" class="signup-link">S'inscrire</a>
+                    <br> 
+                    <span>Retour à la page principale  </span>
+                    <a [routerLink]="['/login']" class="signup-link">retour</a>
+                 
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 col-lg-6 col-xl-5 d-flex align-items-center order-1 order-lg-2">
+         
+          <img src="assets/students12.svg" alt="students" style="width: 500px; height: auto;">
+          
+      </div>
+        
+  
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+      <div class="mt-4"> 
+        <div class="container h-100">
+          <form>
+          
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form3Example3" class="form-control" />
+              <label class="form-label" for="form3Example3">Email address</label>
+            </div>
+            
+         
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="form3Example4" class="form-control" />
+              <label class="form-label" for="form3Example4">Password</label>
+            </div>
+     
+            <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image">
+    </div>
+  </div>
+</div>
+-->

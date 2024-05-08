@@ -1,0 +1,133 @@
+<div class="container">
+    <div class="container-xl col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <div class="card h-100">
+            <div class="card-body">
+                <!--<div class="row gutters">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h6 class="mb-2 text-primary">Personal Details</h6>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="firstName">Prénom</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Prénom"
+                                required name='firstName' #firstName [(ngModel)]="userDetails.firstName">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="lastName">Nom</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Nom"
+                                required name='lastName' #lastName [(ngModel)]="userDetails.lastName">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email"
+                                required name='email' #email [(ngModel)]="userDetails.email">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="username">username</label>
+                            <input type="text" class="form-control" id="username" placeholder="username"
+                                required name='username' #username [(ngModel)]="userDetails.username">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="password">mot de passe</label>
+                            <input type="password" class="form-control" id="password" placeholder="password"
+                                required name='password' #password [(ngModel)]="userDetails.password">
+                        </div>
+                    </div>
+
+                </div>-->
+                <div class="row">
+				    <div class="col-12">
+				        <h6 class="mb-2 text-primary">Personal Details</h6>
+				    </div>
+				    <div class="col-12">
+				        <div class="form-group">
+				            <label for="{{ userRole === 'organization' ? 'name' : 'lastName' }}">Nom</label>
+				            <input type="text" class="form-control" id="{{ userRole === 'organization' ? 'name' : 'lastName' }}" placeholder="Nom" required name="{{ userRole === 'organization' ? 'name' : 'lastName' }}"  [(ngModel)]="userRole === 'organization' ? userDetails.name : userDetails.lastName">
+				        </div>
+				    </div>
+				    <div *ngIf="userRole !== 'organization'">
+				        <div class="col-12">
+				            <div class="form-group">
+				                <label for="firstName">Prénom</label>
+				                <input type="text" class="form-control" id="firstName" placeholder="Prénom" required name="firstName" #firstName [(ngModel)]="userDetails.firstName">
+				            </div>
+				        </div>
+				        <div class="col-12">
+				            <div class="form-group">
+				                <label for="username">Username</label>
+				                <input type="text" class="form-control" id="username" placeholder="Username" required name="username" #username [(ngModel)]="userDetails.username">
+				            </div>
+				        </div>
+				    </div>
+				    <div class="col-12">
+				        <div class="form-group">
+				            <label for="email">Email</label>
+				            <input type="email" class="form-control" id="email" placeholder="Email" required name="email" #email [(ngModel)]="userDetails.email">
+				        </div>
+				    </div>
+				    <div class="col-12">
+				        <div class="form-group">
+				            <label for="password">Mot de passe</label>
+				            <input type="password" class="form-control" id="password" placeholder="Mot de passe" required name="password" #password [(ngModel)]="userDetails.password">
+				        </div>
+				    </div>
+				</div>
+
+               
+
+                <div class="row gutters">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                        <div class="text-right">
+                            <button type="button" id="cancel" name="cancel" class="btn btn-secondary"
+                                [routerLink]="['/profile', userRole]">Annuler</button>
+                            <button type="button" id="update" name="update" class="btn btn-primary"
+                                (click)="updateAdminDetails()">Mettre à jour</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+			
+			<!--
+				<div class="row getter">
+					<div class="col-12">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" class="form-control" id="name" placeholder="name"
+                                required name='name' #name [(ngModel)]="userDetails.name">
+                        </div>
+					<div class="col-12">
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email"
+                                required name='email' #email [(ngModel)]="userDetails.email">
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="password">mot de passe</label>
+                            <input type="password" class="form-control" id="password" placeholder="password"
+                                required name='password' #password [(ngModel)]="userDetails.password">
+                        </div>
+                    </div>
+				</div>
+
+			-->

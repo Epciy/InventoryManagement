@@ -1,0 +1,12 @@
+.container{
+	margin-top: 100px;
+
+}
+.card-body{
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.text-right button{
+	margin-top: 10px;
+	margin-right: 10px; 
+}

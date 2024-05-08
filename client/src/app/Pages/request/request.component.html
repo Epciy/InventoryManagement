@@ -1,0 +1,35 @@
+<section id="content">
+	<main>
+	<div class="table-data">
+	      <div class="order">
+	        <div class="head">
+	          <h3>Demande de material  </h3>
+	          <i class='bx bx-search' ></i>
+	          <i class='bx bx-filter' ></i>
+	        </div>
+	          <table>
+	            <thead>
+	              <tr>
+	                <th>l'identifiant du demande</th>
+	                <th>Type de demande</th>
+	                <th>Status</th>
+	               
+	              </tr>
+	            </thead>
+	            <tbody>
+	              <tr *ngFor="let request of requests">
+		              
+		              <td>{{ request._id}}</td>
+		              <td><span class="status {{ request.request_type}}">{{ request.request_type }}</span></td>
+		              <td><span class="status {{ request.status }}">{{ request.status }}</span></td>
+	            
+	              </tr>
+	            </tbody>
+	          </table>
+
+	      </div>
+	</div>
+	</main> 
+</section>
+ 
+  

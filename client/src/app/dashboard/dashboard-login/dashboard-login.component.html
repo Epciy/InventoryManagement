@@ -1,0 +1,8 @@
+<div class="card-container">
+  <div *ngFor="let card of cards" class="card" >
+    <div class="card-body">
+      <h5 class="card-title">{{ card.title }}</h5>
+      <button class="btn btn-primary"  (click)="selectUserType(card.role.toLowerCase())">Login</button>
+    </div>
+  </div>
+</div>
